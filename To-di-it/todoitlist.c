@@ -7,7 +7,7 @@
 
 void afficher_taches(char *taches[], int nb_taches) {
     if (nb_taches == 0) {
-        printf("Aucune tâche enregistrée.\n");
+        printf("Aucune tâche enregistr%ce.\n",130);
     } else {
         printf("Liste des tâches:\n");
         for (int i = 0; i < nb_taches; i++) {
@@ -20,7 +20,8 @@ void ajouter_tache(char *taches[], int *nb_taches, char nouvelle_tache[]) {
     if (*nb_taches < MAX_TACHES) {
         taches[*nb_taches] = strdup(nouvelle_tache);
         (*nb_taches)++;
-        printf("Tâche ajoutée : %s\n", nouvelle_tache);
+        printf("T%cche ajout%c",194,130);
+        printf("e : %s\n", nouvelle_tache);
     } else {
         printf("Limite maximale de tâches atteinte.\n");
     }
